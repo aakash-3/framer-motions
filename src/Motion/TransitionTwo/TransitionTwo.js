@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import AirplanemodeActiveIcon from "@mui/icons-material/AirplanemodeActive";
+import DirectionsSubwayFilledIcon from "@mui/icons-material/DirectionsSubwayFilled";
+import CarCrashIcon from "@mui/icons-material/CarCrash";
+import AirportShuttleIcon from "@mui/icons-material/AirportShuttle";
 
 const TransitionTwo = () => {
   return (
@@ -14,7 +18,7 @@ const TransitionTwo = () => {
           },
           height: "500px",
           border: "1px solid black",
-          backgroundColor: "lightblue",
+          backgroundColor: "green",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -47,9 +51,17 @@ const TransitionTwo = () => {
                 boxSizing: "border-box",
                 width: "100%",
                 height: "100%",
-                backgroundColor: "red",
+                backgroundColor: "lightblue",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                border: "2px solid blue",
+                borderRadius: "8px",
               }}
-            ></Box>
+            >
+              <CarCrashIcon sx={{ fontSize: "48px" }} />
+              <Typography>Manufacturing</Typography>
+            </Box>
           </motion.div>
           <Box style={{ display: "flex", gap: "10px" }}>
             {Array(6)
@@ -71,7 +83,7 @@ const TransitionTwo = () => {
                     boxSizing: "border-box",
                     flex: 1,
                     aspectRatio: 1,
-                    padding: "10px",
+                    padding: "6px",
                   }}
                 >
                   <Box
@@ -79,9 +91,17 @@ const TransitionTwo = () => {
                       boxSizing: "border-box",
                       width: "100%",
                       height: "100%",
-                      backgroundColor: "red",
+                      backgroundColor: "lightblue",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "2px solid blue",
+                      borderRadius: "8px",
                     }}
-                  ></Box>
+                  >
+                    <AirplanemodeActiveIcon sx={{ fontSize: "48px" }} />
+                  </Box>
+                  <Typography textAlign="center">Text1</Typography>
                 </motion.div>
               ))}
           </Box>
@@ -110,17 +130,27 @@ const TransitionTwo = () => {
                     boxSizing: "border-box",
                     flex: 1,
                     aspectRatio: 1,
-                    padding: "10px",
+                    padding: "6px",
                   }}
                 >
+                  <Typography textAlign="center">
+                    TextText uwdvg2 eiufw
+                  </Typography>
                   <Box
                     style={{
                       boxSizing: "border-box",
                       width: "100%",
                       height: "100%",
-                      backgroundColor: "black",
+                      backgroundColor: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "2px solid grey",
+                      borderRadius: "8px",
                     }}
-                  ></Box>
+                  >
+                    <DirectionsSubwayFilledIcon sx={{ fontSize: "48px" }} />
+                  </Box>
                 </motion.div>
               ))}
           </Box>
@@ -148,9 +178,17 @@ const TransitionTwo = () => {
                 boxSizing: "border-box",
                 width: "100%",
                 height: "100%",
-                backgroundColor: "black",
+                backgroundColor: "white",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                border: "2px solid grey",
+                borderRadius: "8px",
               }}
-            ></Box>
+            >
+              <AirportShuttleIcon sx={{ fontSize: "48px" }} />
+              <Typography>Retailing</Typography>
+            </Box>
           </motion.div>
         </Box>
       </Box>
