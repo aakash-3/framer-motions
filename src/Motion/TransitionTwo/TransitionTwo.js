@@ -133,9 +133,7 @@ const TransitionTwo = () => {
                     padding: "6px",
                   }}
                 >
-                  <Typography textAlign="center">
-                    TextText uwdvg2 eiufw
-                  </Typography>
+                  <Typography textAlign="center">Text2</Typography>
                   <Box
                     style={{
                       boxSizing: "border-box",
