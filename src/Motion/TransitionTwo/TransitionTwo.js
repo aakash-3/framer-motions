@@ -6,6 +6,15 @@ import DirectionsSubwayFilledIcon from "@mui/icons-material/DirectionsSubwayFill
 import CarCrashIcon from "@mui/icons-material/CarCrash";
 import AirportShuttleIcon from "@mui/icons-material/AirportShuttle";
 
+const texts = [
+  "Order Management",
+  "Replace Order",
+  "CRM",
+  "Magniude",
+  "Alpha Beta Gama",
+  "Financial Management System",
+];
+
 const TransitionTwo = () => {
   return (
     <Box style={{ witdth: "100vw", height: "100vh" }}>
@@ -63,34 +72,46 @@ const TransitionTwo = () => {
               <Typography>Manufacturing</Typography>
             </Box>
           </motion.div>
-          <Box style={{ display: "flex", gap: "10px" }}>
-            {Array(6)
-              .fill(6)
-              .map((item, index) => (
-                <motion.div
-                  initial={{ y: 0, opacity: 1 }}
-                  animate={{
-                    y: [0, -100, -100, -100, -100, -100, -100, -100, -100, 0],
-                    opacity: [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-                  }}
-                  transition={{
-                    duration: 5,
-                    delay: 4,
-                    repeat: Infinity,
-                    repeatDelay: 4,
-                  }}
-                  style={{
-                    boxSizing: "border-box",
-                    flex: 1,
-                    aspectRatio: 1,
-                    padding: "6px",
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "space-evenly",
+            }}
+          >
+            {texts.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ y: 0, opacity: 1 }}
+                animate={{
+                  y: [0, -100, -100, -100, -100, -100, -100, -100, -100, 0],
+                  opacity: [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+                }}
+                transition={{
+                  duration: 5,
+                  delay: 4,
+                  repeat: Infinity,
+                  repeatDelay: 4,
+                }}
+              >
+                <Box
+                  sx={{
+                    width: {
+                      xs: "50px",
+                      sm: "75px",
+                      md: "100px",
+                    },
                   }}
                 >
                   <Box
-                    style={{
+                    sx={{
                       boxSizing: "border-box",
                       width: "100%",
-                      height: "100%",
+                      height: {
+                        xs: "50px",
+                        sm: "75px",
+                        md: "100px",
+                      },
                       backgroundColor: "lightblue",
                       display: "flex",
                       alignItems: "center",
@@ -99,46 +120,89 @@ const TransitionTwo = () => {
                       borderRadius: "8px",
                     }}
                   >
-                    <AirplanemodeActiveIcon sx={{ fontSize: "48px" }} />
+                    <AirplanemodeActiveIcon
+                      sx={{
+                        fontSize: {
+                          xs: 48,
+                          sm: 48,
+                          md: 48,
+                        },
+                      }}
+                    />
                   </Box>
-                  <Typography textAlign="center">Text1</Typography>
-                </motion.div>
-              ))}
+                  <Typography
+                    textAlign="center"
+                    sx={{
+                      fontSize: {
+                        xs: 12,
+                        sm: 13,
+                        md: 14,
+                      },
+                    }}
+                  >
+                    {item}
+                  </Typography>
+                </Box>
+              </motion.div>
+            ))}
           </Box>
         </Box>
 
         {/* /////////////----------------------------------------///////// */}
 
-        <Box style={{ position: "absolute", width: "100%" }}>
-          <Box style={{ display: "flex", gap: "10px" }}>
-            {Array(6)
-              .fill(6)
-              .map((item, index) => (
-                <motion.div
-                  initial={{ y: 100, opacity: 0 }}
-                  animate={{
-                    y: [100, 0, 0, 0, 0, 0, 0, 0, 0, 100],
-                    opacity: [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                  }}
-                  transition={{
-                    duration: 5,
-                    delay: 4,
-                    repeat: Infinity,
-                    repeatDelay: 4,
-                  }}
-                  style={{
-                    boxSizing: "border-box",
-                    flex: 1,
-                    aspectRatio: 1,
-                    padding: "6px",
+        <Box sx={{ position: "absolute", width: "100%" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "space-evenly",
+            }}
+          >
+            {texts.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ y: 100, opacity: 0 }}
+                animate={{
+                  y: [100, 0, 0, 0, 0, 0, 0, 0, 0, 100],
+                  opacity: [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  delay: 4,
+                  repeat: Infinity,
+                  repeatDelay: 4,
+                }}
+              >
+                <Box
+                  sx={{
+                    width: {
+                      xs: "50px",
+                      sm: "75px",
+                      md: "100px",
+                    },
                   }}
                 >
-                  <Typography textAlign="center">Text2</Typography>
+                  <Typography
+                    textAlign="center"
+                    sx={{
+                      fontSize: {
+                        xs: 12,
+                        sm: 13,
+                        md: 14,
+                      },
+                    }}
+                  >
+                    {item}
+                  </Typography>
                   <Box
-                    style={{
+                    sx={{
                       boxSizing: "border-box",
                       width: "100%",
-                      height: "100%",
+                      height: {
+                        xs: "50px",
+                        sm: "75px",
+                        md: "100px",
+                      },
                       backgroundColor: "white",
                       display: "flex",
                       alignItems: "center",
@@ -147,10 +211,19 @@ const TransitionTwo = () => {
                       borderRadius: "8px",
                     }}
                   >
-                    <DirectionsSubwayFilledIcon sx={{ fontSize: "48px" }} />
+                    <DirectionsSubwayFilledIcon
+                      sx={{
+                        fontSize: {
+                          xs: 48,
+                          sm: 48,
+                          md: 48,
+                        },
+                      }}
+                    />
                   </Box>
-                </motion.div>
-              ))}
+                </Box>
+              </motion.div>
+            ))}
           </Box>
           <motion.div
             initial={{ y: -100, opacity: 0 }}
